@@ -1,0 +1,99 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <title>Contacto</title>
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="header__logo">
+                <img class="header-logo__fito" src="../icon/LOGO.png" alt="logo-fito">
+            </div>
+            <nav class="header__nav">
+                <ul class="header-nav__ul">
+                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="../index.html">Inicio</a></li>
+                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="Imágenes.html">Imágenes</a></li> <!--target="_blank" PROPIEDAD PARA ABRIR LINKS SIN SALIR DEL SITIO-->
+                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="biografia.html">Biografía</a></li>
+                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+
+
+        <main>
+
+            <form class="formulario-fito" action="">
+
+                <h2>¿Necesitás alguna ayuda?</h2>
+
+                <div class="contenido-form">
+                    <div class="form-asunto">
+                        <ul>
+                            <li><input type="text" id="name" name="user_name" placeholder="Nombre:"></li>
+                            <li><input type="text" id="name" name="user_asunto" placeholder="Asunto:"></li>
+                            <li><input type="email" id="mail" name="user_mail" placeholder="Email:"></li>
+                            <li><textarea name="user-msg" id="msg" cols="21" rows="5"></textarea></li>
+                            
+                            <input type="submit" value="Enviar Mensaje">
+                            <input type="reset" value="Borrar Mensaje">
+                        </ul>
+                    </div>
+    
+                    <div clas="form-datos">
+                        <div class="tiene600">
+                            <h3>¿Tenés un Fiat 600?</h3>
+
+                            <p><input type="radio" name="fitito" id="si-tiene">Sí</p>
+                            <p><input type="radio" name="fitito" id="no-tiene">No</p> 
+                        </div>
+                        
+                        <div class="modelo600">
+                            <h3>¿Qué modelo tenés?</h3>
+                            <select name="Modelos">
+                                <option value="Modelo">Modelo</option>
+                                <option value="E">E</option>
+                                <option value="R">R</option>
+                                <option value="S">S</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+
+            <div class="padre"> 
+                <div class="hijo"></div>
+            </div>
+
+        </main>
+
+        <footer>
+            <div class="footer__container">
+                <div class="footer-container__social-icons">
+                    <a href=""><img src="../icon/facebook.svg" alt=""></a>
+                    <a href=""><img src="../icon/github.svg" alt=""></a>
+                    <a href=""><img src="../icon/linkedin.svg" alt=""></a>
+                    <a href=""><img src="../icon/square-instagram.svg" alt=""></a>
+                </div>
+                <div class="footer-container__nav">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Imágenes</a></li>
+                        <li><a href="#">Biografía</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-container__copyright">
+                <p>Copyright &copy;2023; Diseñado por <span class="footer-container-copyright__creador">Axel Henderson Bianchi</span></p>
+            </div>
+        </footer>
+    </body>
+</html>
