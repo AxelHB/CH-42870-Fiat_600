@@ -1,0 +1,14 @@
+/*FORMATEO DE ESTILO*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box; 
+    scroll-behavior: smooth; /*SUAVIZA EL SCROLL*/
+    user-select: none;
+    text-align: justify; /*IMPEDIR LA SELECCIÓN DE TEXTO PARA EL USR*/
+}
+a:link , a:visited , a:active {
+    text-decoration: none;
+    transition: .5s;
+}
