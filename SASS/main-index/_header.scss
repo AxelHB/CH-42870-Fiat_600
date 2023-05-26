@@ -111,6 +111,16 @@ header {
         left: 20px;
         width: unset;
     }
+    header .navbar .logo a {
+        font-size: 20px;
+    }
+    header .navbar .logo img {
+        width: 35px;
+        height: 35px;
+    }
+    header {
+        padding: 0 20px;
+    }
 }
 
 //BANNER FITO

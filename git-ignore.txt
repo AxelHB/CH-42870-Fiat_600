@@ -6,3 +6,5 @@ la siguiente linea /node_modules.
 Al presionar CTRL+Z para deshacer y CTRL+Y para rehacer.
 
 Por defecto para comentar es: ctrl + k + c.
+
+git push origin main -f

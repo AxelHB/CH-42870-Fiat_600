@@ -141,6 +141,16 @@ header .action_btn:active {
     left: 20px;
     width: unset;
   }
+  header .navbar .logo a {
+    font-size: 20px;
+  }
+  header .navbar .logo img {
+    width: 35px;
+    height: 35px;
+  }
+  header {
+    padding: 0 20px;
+  }
 }
 .zona1 {
   position: relative;
@@ -250,7 +260,7 @@ footer {
 
 /*/////////////////*/
 .footer-container__nav {
-  margin: 30px 0;
+  margin: 30px auto;
 }
 
 .footer-container__nav ul {
@@ -296,6 +306,7 @@ footer {
 @media (max-width: 700px) {
   .footer-container__nav ul {
     flex-direction: column;
+    align-items: center;
   }
   .footer-container__nav ul li {
     width: 100%;
