@@ -1,2 +1,6 @@
 SI NODE, LES CREA UNA CARPETA DE NODE, CREAMOS EN LA RAIZ UN ".git_ignore" y dentro escribimos
 la siguiente linea /node_modules.
+
+-TECLA CONTROL +D selecciona varios elementos.
+
+Al presionar CTRL+Z para deshacer y CTRL+Y para rehacer.

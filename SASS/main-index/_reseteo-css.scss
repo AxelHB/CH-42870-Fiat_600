@@ -12,3 +12,17 @@ a:link , a:visited , a:active {
     text-decoration: none;
     transition: .5s;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+/*EDICIÓN DEL MAIN*/
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
