@@ -4,3 +4,5 @@ la siguiente linea /node_modules.
 -TECLA CONTROL +D selecciona varios elementos.
 
 Al presionar CTRL+Z para deshacer y CTRL+Y para rehacer.
+
+Por defecto para comentar es: ctrl + k + c.

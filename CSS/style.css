@@ -29,55 +29,128 @@ main {
   margin-top: 100px;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
+header {
+  background-color: rgba(0, 0, 0, 0.829);
+  position: relative;
+  padding: 0 80px;
+}
+header a {
+  color: white;
+  font-size: 15px;
+}
+header a:hover {
+  color: orange;
+}
+header .navbar {
   width: 100%;
-  height: 100px;
+  height: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-  transition: 0.7s;
-  padding: 30px 20px;
-  z-index: 10;
-  background-color: rgba(206, 206, 206, 0.3882352941);
+  align-items: center;
+  justify-content: space-between;
 }
-.header .header__logo {
-  position: relative;
-  color: #0056b8;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  transition: 1.5s;
-}
-.header .header__logo img {
-  width: 50px;
+header .navbar .logo img {
   height: 50px;
-  margin-right: 50px;
+  width: 50px;
+  margin-right: 20px;
 }
-.header .header__nav {
+header .navbar .logo a {
+  font-size: 25px;
+}
+header .navbar .logo a span {
+  color: aqua;
+}
+header .navbar .links {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
 }
-.header .header-nav__ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+header .navbar .toggle_btn {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+  display: none;
 }
-.header .header-nav-ul-li__a {
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0 15px;
-  color: #0056b8;
-  letter-spacing: 2px;
-  font-weight: 600;
-  transition: 0.7s;
+header .action_btn {
+  background-color: orange;
+  color: rgb(0, 0, 0);
+  padding: 5px 5px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+header .action_btn:hover {
+  scale: 1.05;
+  color: white;
+}
+header .action_btn:active {
+  scale: 0.95;
 }
 
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  right: 10px;
+  top: 60px;
+  width: 300px;
+  height: 0;
+  background-color: rgba(80, 80, 80, 0.623);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  header .navbar .links,
+  header .navbar .action_btn {
+    display: none;
+  }
+  header .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 20px;
+    width: unset;
+  }
+}
 .zona1 {
   position: relative;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding-bottom: 150px;
+  align-items: center;
+  text-align: center;
   width: 100%;
   height: 100vh;
   background-image: url(../image/IMG-INDEX/HEADER-FITO.jpeg);
@@ -85,14 +158,57 @@ main {
   background-position: center;
 }
 
-.header.abajo {
-  background: #fff;
-  padding: 15px 20px;
+#btn-mas {
+  display: none;
 }
 
-.header.abajo .header__logo,
-.header.abajo .header-nav-ul-li__a {
-  color: #000;
+.container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  z-index: 222;
+}
+
+.redes a, .btn-mas label {
+  display: block;
+  text-decoration: none;
+  background: #cc2b2b;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+}
+
+.redes a:hover {
+  background: #fff;
+  color: #cc2b2b;
+}
+
+.redes a {
+  margin-bottom: -15px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#btn-mas:checked ~ .redes a {
+  margin-bottom: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-mas label {
+  cursor: pointer;
+  background: #f44141;
+  font-size: 23px;
+}
+
+#btn-mas:checked ~ .btn-mas label {
+  transform: rotate(135deg);
+  font-size: 25px;
 }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/

@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/CSS/style.css">
+        <!--FONT-AWESOME-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="CSS/style.css">
         <!--BOOTSTRAP-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
 
@@ -12,18 +14,54 @@
     </head>
     <body>
 
-        <header class="header">
-            <a class="header__logo" href="#"><img src="icon/LOGO.png" alt=""> AXEL-HB</a>
-            <nav class="header__nav">
-                <ul class="header-nav__ul">
-                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="index.html">Inicio</a></li>
-                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="pages/Imágenes.html">Imágenes</a></li>
-                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="pages/biografia.html">Biografía</a></li>
-                    <li class="header-nav-ul__li"><a class="header-nav-ul-li__a" href="pages/Contacto.html">Contacto</a></li>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="icon/LOGO.png" alt="">
+                    <a href="">Blog Fito600 <span>AxelHB</span></a>
+                </div>
+                
+                <ul class="links">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Imágenes</a></li>
+                    <li><a href="">Biografía</a></li>
+                    <li><a href="">Contacto</a></li>
                 </ul>
-            </nav>
+
+                <a href="" class="action_btn">Comencemos</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Imágenes</a></li>
+                <li><a href="">Biografía</a></li>
+                <li><a href="">Contacto</a></li>
+                <li><a href="" class="action_btn">Comencemos</a></li>
+            </div>
+
         </header>
-        <section class="zona1"></section>
+
+        <section class="zona1">
+            <h1>Bienvenidos</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatem iusto fugit exercitationem dignissimos molestiae.</p>
+        
+        </section>
+        <!--BOTON FLOTANTE DE NAV-->
+        <div class="container">
+            <input type="checkbox" id="btn-mas">
+            <div class="redes">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+            </div>
+            <div class="btn-mas">
+                <label for="btn-mas" class="fa fa-plus"></label>
+            </div>
+        </div>
 
         <div class="carrusel">
             <div id="carouselExampleIndicators" class="carousel slide">
