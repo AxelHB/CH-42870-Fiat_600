@@ -421,6 +421,64 @@ input:focus {
     font-size: 15px;
   }
 }
+h1 {
+  text-align: center;
+}
+
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+.gallery__container .gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*HACEMOS QUE LA IMG OCUPE TODO SU ESPACIO EN GRILLAS*/
+}
+.gallery__container .gallery__item {
+  position: relative;
+}
+.gallery__container .gallery__tittle {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/*nth-child() es una pseudo-clase que selecciona a los elementos en un grupo de hermanos que coinciden con el patrón especificado*/
+.gallery__item:nth-child(3) {
+  grid-row-start: span 2;
+}
+
+.gallery__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+
+.gallery__item:nth-child(5) {
+  grid-column-start: span 2;
+}
+
+@media (min-width: 1024px) {
+  .gallery__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__item:nth-child(3) {
+    grid-column-start: span 2;
+  }
+  .gallery__item:nth-child(6) {
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(7) {
+    grid-row-start: span 2;
+  }
+}
 /*PÁGINA IMÁGENES: GRILLAS*/
 .grilla-bio .border {
   border: 2px solid red;
