@@ -6,8 +6,8 @@
   list-style: none;
   box-sizing: border-box;
   scroll-behavior: smooth; /*SUAVIZA EL SCROLL*/
-  user-select: none;
-  text-align: justify; /*IMPEDIR LA SELECCIÓN DE TEXTO PARA EL USR*/
+  user-select: none; /*IMPEDIR LA SELECCIÓN DE TEXTO PARA EL USR*/
+  text-align: justify;
 }
 
 a:link, a:visited, a:active {
@@ -157,17 +157,39 @@ header .action_btn:active {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding-bottom: 150px;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   width: 100%;
   height: 100vh;
   background-image: url(../image/IMG-INDEX/HEADER-FITO.jpeg);
   background-size: cover;
+  background-attachment: fixed;
   background-position: center;
 }
+.zona1 h1 {
+  color: rgb(201, 207, 107);
+}
+.zona1 p {
+  margin-top: -10px;
+  color: rgb(247, 242, 1);
+  font-size: 20px;
+}
 
+/*
+   Algunas concluciones con respecto a las imágenes
+
+   1. Por defecto si no indicamos nada, la imagen aparece por defecto con su tamaño.
+
+   2. Si se establece un size concreto con porcentajes o pixeles, se pierde la relación de aspecto y la calidad.
+
+   3. Con size contain, se le da la propiedad para mostrar la imagen completa en el elemento, manteniendo la relacion de aspecto.
+
+   4. Con size cover, se le da la propiedad para que la imagen cubra al elemento entero, manteniendo la relacion de aspecto.
+
+   Una de las soluciones mas usadas son: Size Cover con attachment fixed y position center.
+                                       Size Contain en caso de ser necesario mostrar toda la imagen con background repeat para que se quede el elemento cubierto.
+*/
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 footer {
   backdrop-filter: blur(16px) saturate(176%);
@@ -478,6 +500,52 @@ input:focus {
     width: 50%;
   }
 }
+#container-floating {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 30px;
+  right: 5px;
+  z-index: 22222;
+}
+#container-floating .nds {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: scale(0);
+  cursor: pointer;
+}
+#container-floating .nds a img {
+  width: 25px;
+  height: 25px;
+}
+#container-floating .nd1 {
+  background: #d3a411;
+  right: 15px;
+  bottom: 120px;
+  animation-delay: 0.2s;
+  animation: bounce-out-nds 0.3s linear;
+  animation-fill-mode: forwards;
+}
+#container-floating .nd3 {
+  background: #3c80f6;
+  right: 15px;
+  bottom: 180px;
+  animation-delay: 0.15s;
+  animation: bounce-out-nds 0.15s linear;
+  animation-fill-mode: forwards;
+}
+#container-floating .nd4 {
+  background: #ba68c8;
+  right: 15px;
+  bottom: 240px;
+  animation-delay: 0.1s;
+  animation: bounce-out-nds 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
 #floating-button {
   width: 55px;
   height: 55px;
@@ -485,15 +553,11 @@ input:focus {
   background: #db4437;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 5px;
   cursor: pointer;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  /*   visibility: hidden;
-    opacity: 0;
-    transition: 400ms;*/
 }
-
-.plus {
+#floating-button .plus {
   color: white;
   position: absolute;
   top: 0;
@@ -511,28 +575,7 @@ input:focus {
   animation: plus-out 0.3s;
   transition: all 0.3s;
 }
-
-#container-floating {
-  position: fixed;
-  width: 70px;
-  height: 70px;
-  bottom: 30px;
-  right: 30px;
-  z-index: 22222;
-}
-
-#container-floating:hover {
-  height: 400px;
-  width: 90px;
-  padding: 30px;
-}
-
-#container-floating:hover .plus {
-  animation: plus-in 0.15s linear;
-  animation-fill-mode: forwards;
-}
-
-.edit {
+#floating-button .edit {
   position: absolute;
   top: 0;
   display: block;
@@ -549,10 +592,34 @@ input:focus {
   animation: edit-out 0.3s;
 }
 
+#container-floating:hover {
+  height: 400px;
+  width: 90px;
+  padding: 30px;
+}
+
+#container-floating:hover .plus {
+  animation: plus-in 0.15s linear;
+  animation-fill-mode: forwards;
+}
+
 #container-floating:hover .edit {
   animation: edit-in 0.2s;
   animation-delay: 0.1s;
   animation-fill-mode: forwards;
+}
+
+#container-floating:hover .nds {
+  animation: bounce-nds 0.1s linear;
+  animation-fill-mode: forwards;
+}
+
+#container-floating:hover .nd3 {
+  animation-delay: 0.08s;
+}
+
+#container-floating:hover .nd4 {
+  animation-delay: 0.15s;
 }
 
 @keyframes edit-in {
@@ -595,43 +662,6 @@ input:focus {
     transform: rotateZ(0deg);
   }
 }
-.nds {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: fixed;
-  z-index: 300;
-  transform: scale(0);
-  cursor: pointer;
-}
-
-.nd1 {
-  background: #d3a411;
-  right: 40px;
-  bottom: 120px;
-  animation-delay: 0.2s;
-  animation: bounce-out-nds 0.3s linear;
-  animation-fill-mode: forwards;
-}
-
-.nd3 {
-  background: #3c80f6;
-  right: 40px;
-  bottom: 180px;
-  animation-delay: 0.15s;
-  animation: bounce-out-nds 0.15s linear;
-  animation-fill-mode: forwards;
-}
-
-.nd4 {
-  background: #ba68c8;
-  right: 40px;
-  bottom: 240px;
-  animation-delay: 0.1s;
-  animation: bounce-out-nds 0.1s linear;
-  animation-fill-mode: forwards;
-}
-
 @keyframes bounce-nds {
   from {
     opacity: 0;
@@ -651,37 +681,6 @@ input:focus {
     transform: scale(0);
   }
 }
-#container-floating:hover .nds {
-  animation: bounce-nds 0.1s linear;
-  animation-fill-mode: forwards;
-}
-
-#container-floating:hover .nd3 {
-  animation-delay: 0.08s;
-}
-
-#container-floating:hover .nd4 {
-  animation-delay: 0.15s;
-}
-
-#container-floating:hover .nd5 {
-  animation-delay: 0.2s;
-}
-
-.letter {
-  font-size: 23px;
-  font-family: "Roboto";
-  color: white;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-  text-align: center;
-  line-height: 40px;
-}
-
 .reminder {
   position: absolute;
   left: 0;
@@ -690,16 +689,6 @@ input:focus {
   top: 0;
   bottom: 0;
   line-height: 40px;
-}
-
-.profile {
-  border-radius: 50%;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  right: 20px;
 }
 
 .mostrar {

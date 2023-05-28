@@ -129,15 +129,37 @@ header {
      bottom: 0  ;
      display: flex;
      flex-direction: column;
-     justify-content: end;
-     padding-bottom: 150px;
+     justify-content: flex-start;
      align-items: center;
      text-align: center;
      width: 100%;
      height: 100vh;
      background-image: url(../image/IMG-INDEX/HEADER-FITO.jpeg);
      background-size: cover; //HACEMOS QUE NO SE REPITA LA IMAGEN
+     background-attachment: fixed;
      background-position: center; //CENTRAMOS LA IMAGEN
+     h1 {
+        color: rgb(201, 207, 107);
+     }
+     p {
+        margin-top: -10px;
+        color: rgb(247, 242, 1);
+        font-size: 20px;
+     }
  }
 
+ /*
+    Algunas concluciones con respecto a las imágenes
+    
+    1. Por defecto si no indicamos nada, la imagen aparece por defecto con su tamaño.
+    
+    2. Si se establece un size concreto con porcentajes o pixeles, se pierde la relación de aspecto y la calidad.
+
+    3. Con size contain, se le da la propiedad para mostrar la imagen completa en el elemento, manteniendo la relacion de aspecto.
+
+    4. Con size cover, se le da la propiedad para que la imagen cubra al elemento entero, manteniendo la relacion de aspecto.
+
+    Una de las soluciones mas usadas son: Size Cover con attachment fixed y position center.
+                                        Size Contain en caso de ser necesario mostrar toda la imagen con background repeat para que se quede el elemento cubierto.
+ */
  
