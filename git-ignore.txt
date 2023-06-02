@@ -2,6 +2,8 @@ SI NODE, LES CREA UNA CARPETA DE NODE, CREAMOS EN LA RAIZ UN ".git_ignore" y den
 la siguiente linea /node_modules.
 IGNORAMOS TAMBIEN EL PACKAGE.JSON DENTRO DEL ".git_ignore" con la siguiente linea /package.json
 
+-*.json (IGNORA A TODO LO QUE TENGA Y USE JSON)
+
 -TECLA CONTROL +D selecciona varios elementos.
 
 Al presionar CTRL+Z para deshacer y CTRL+Y para rehacer.
