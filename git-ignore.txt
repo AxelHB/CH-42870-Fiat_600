@@ -1,5 +1,6 @@
 SI NODE, LES CREA UNA CARPETA DE NODE, CREAMOS EN LA RAIZ UN ".git_ignore" y dentro escribimos
 la siguiente linea /node_modules.
+IGNORAMOS TAMBIEN EL PACKAGE.JSON DENTRO DEL ".git_ignore" con la siguiente linea /package.json
 
 -TECLA CONTROL +D selecciona varios elementos.
 

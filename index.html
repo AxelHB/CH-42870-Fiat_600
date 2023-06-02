@@ -4,11 +4,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS/style.css">
+        <meta name="description" content="">
+        <meta name="keyword" content="">
+        <!--HOVER IMAGE-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/2.0.0/css/imagehover.min.css">
+        <!--SCROLL ANIMATION-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!--FONT-AWESOME-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!--BOOTSTRAP-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+        <!--STYLE INDEX-->  
+        <link rel="stylesheet" href="CSS/style.css">
         <title>Inicio</title>
     </head>
     <body>
@@ -98,7 +105,7 @@
 
         <main>
             <!--SECCIÓN PRINCIPAL IMAGEN/CARACTERÍSTICAS-->
-            <section class="seccion1">
+            <section class="seccion1" data-aos="zoom-in-left">
                 <!--ART.IMAGEN-->
                 <article class="seccion1__portada">
                     <img class="seccion1-portada__imgFito" src="image/Fiat 600.jpg" alt="imagen de portada fito">
@@ -128,7 +135,7 @@
             </section>
 
             <!--SECCIÓN HISTORIA-->
-            <section class="seccion2">
+            <section class="seccion2" data-aos="zoom-in-right">
                 <h2 class="seccion2__h2">El día que obtuve un fiat 600R 1970</h2>
                 <p class="seccion2__p">Esta historia se remonta a cuando yo cumpli 18 años. Fué ahí donde mis padres decieron regalarme mi primer auto, y no fue mas que el fitito. Al principio pensaba que no podía hacer mucho... pero con el correr del tiempo me di cuenta que podía hacer muchas más cosas de las que pensaba. Tanto en diseño, como en performance, las posibilidades eran infinitas, su mecánica y todo el conjunto, hacen que sea y se convierta en un juguete con el cual aprendés de todo. Las miradas nunca faltaron y la ayuda menos, fué y será uno de los autos que ganó un gran lugar en su historia, y de echo, más fieles que los autos actuales.</p>
             </section>
@@ -137,10 +144,10 @@
         <footer>
             <div class="footer__container">
                 <div class="footer-container__social-icons">
-                    <a href=""><img src="icon/facebook.svg" alt=""></a>
-                    <a href=""><img src="icon/github.svg" alt=""></a>
-                    <a href=""><img src="icon/linkedin.svg" alt=""></a>
-                    <a href=""><img src="icon/square-instagram.svg" alt=""></a>
+                    <a target="_blank" href=""><img src="icon/facebook.svg" alt=""></a>
+                    <a target="_blank" href="https://github.com/AxelHB"><img src="icon/github.svg" alt=""></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/axel-henderson/"><img src="icon/linkedin.svg" alt=""></a>
+                    <a target="_blank" href=""><img src="icon/square-instagram.svg" alt=""></a>
                 </div>
                 <div class="footer-container__nav">
                     <ul>
@@ -160,6 +167,11 @@
         <script src="JS/header.js"></script>
         <!--LIBRERÍA BOOTSTRAP-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--SCRIPT SCROLL ANIMATION-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 
     </body>
 
