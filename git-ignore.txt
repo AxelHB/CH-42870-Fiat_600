@@ -1,13 +1,23 @@
-SI NODE, LES CREA UNA CARPETA DE NODE, CREAMOS EN LA RAIZ UN ".git_ignore" y dentro escribimos
-la siguiente linea /node_modules.
-IGNORAMOS TAMBIEN EL PACKAGE.JSON DENTRO DEL ".git_ignore" con la siguiente linea /package.json
+SI NODE, LES CREA UNA CARPETA DE NODE, CREAMOS EN LA RAIZ UN ".git_ignore" Y HACEMOS LO SIGUIENTE:
 
--*.json (IGNORA A TODO LO QUE TENGA Y USE JSON)
+1-cortamos la carpeta de node y el package de json y lo movemos a otro lado fuera de la raiz.
 
--TECLA CONTROL +D selecciona varios elementos.
+2-Hacemos un "git add, commit y push" para enviar todo al repo sin esos archivos.
 
-Al presionar CTRL+Z para deshacer y CTRL+Y para rehacer.
+3-Antes de agregar los archivos que sacamos fuera, dentro del ".git_ignore" creamos las lineas con lo que querramos ignorar: /node_modules   /package.json
 
-Por defecto para comentar es: ctrl + k + c.
+4-Ahora sí agregamos nuevamente los archivos y hacemos un "git add, commit y push" para enviar todo con esos archivos ignorados.
+ 
+COMO CORREGIR UN @MEDIA QUERIES:
+1-A TODO EL DOCUMENTO REPRESENTADO POR UN "*" podemos darle un border: 1px solid red; PARA ASÍ PODER VER DONDE NOS EQUIVOCAMOS CON EL RESPONSIVE.
 
-git push origin main -f
+////////////////////////////////////////////////////////////////////////////////////
+
+DATOS DE INTERES:
+1-TECLA CONTROL +D selecciona varios elementos.
+
+2-Al presionar CTRL+Z para deshacer y CTRL+Y para rehacer.
+
+3-Por defecto para comentar es: ctrl + k + c.
+
+4-git push origin main -f (PARA CUANDO NOS DE ERROR EL PUSH SI ELIMINAMOS ALGO DEL REPO EN LA NUBE)
